@@ -44,6 +44,7 @@ namespace killenter
             catch (Exception ex)
             {
                 string str = ex.Message;
+                Console.WriteLine(str);
             }
             return null;
         }
@@ -79,8 +80,21 @@ namespace killenter
             string path = AppDomain.CurrentDomain.BaseDirectory + "tk.js";
             string str2 = File.ReadAllText(path);
             string fun = string.Format(@"tk('{0}','{1}')", oldText, tkk);
-            Console.WriteLine(fun);
+            //Console.WriteLine(fun);
             string result = ExecuteScript(fun, str2);
+            return result;
+        }
+
+        private static String getTK2(String oldText)
+        {
+            String TKKScript = getTKKScript();
+            string path = AppDomain.CurrentDomain.BaseDirectory + "tk2.js";
+            string str2 = TKKScript + File.ReadAllText(path);
+            string fun = string.Format(@"tq('{0}')", oldText);
+            string result = ExecuteScript(fun, str2);
+            //Console.WriteLine(fun);
+            //Console.WriteLine(str2);
+            //Console.WriteLine(result);
             return result;
         }
 
@@ -88,12 +102,12 @@ namespace killenter
         {
             try
             {
-                String tk = getTK(oldText);
+                String tk = getTK2(oldText);
                 using (var webClient = new WebClient())
                 {
                     webClient.Encoding = System.Text.Encoding.GetEncoding("GB2312");
                     webClient.Headers.Add("User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.165063 Safari/537.36 AppEngine-Google.");
-                    String url = "https://translate.google.cn/translate_a/single?client=t&sl=en&tl=zh-CN&hl=zh-CN&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&ie=UTF-8&oe=UTF-8&pc=1&otf=1&ssel=0&tsel=0&kc=1&tk=" + tk + "&q=" + oldText;
+                    String url = "https://translate.google.cn/translate_a/single?client=t&sl=en&tl=zh-CN&hl=zh-CN&dt=at&dt=bd&dt=ex&dt=ld&dt=md&dt=qca&dt=rw&dt=rm&dt=ss&dt=t&ie=UTF-8&oe=UTF-8&pc=1&otf=1&ssel=0&tsel=0&kc=1" + tk + "&q=" + System.Web.HttpUtility.UrlEncode(oldText);
                     string html = Encoding.UTF8.GetString(webClient.DownloadData(url));
                     JArray jsonArray = JArray.Parse(html);
                     String result = "";
@@ -107,11 +121,12 @@ namespace killenter
                     return result;
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
+                ErrorLog.WriteLog(e, "");
                 return "您的操作太频繁，请稍后再试。（当然也可能是你的电脑访问不了谷歌翻译呵呵）";
             }
-            
+
         }
     }
 }
