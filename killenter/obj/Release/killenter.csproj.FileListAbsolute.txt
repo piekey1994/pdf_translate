@@ -17,3 +17,4 @@ D:\Documents\Visual Studio 2017\Projects\killenter\killenter\obj\Release\killent
 D:\Documents\Visual Studio 2017\Projects\killenter\killenter\obj\Release\killenter.csproj.GenerateResource.Cache
 D:\Documents\Visual Studio 2017\Projects\killenter\killenter\obj\Release\killenter.exe
 D:\Documents\Visual Studio 2017\Projects\killenter\killenter\obj\Release\killenter.pdb
+d:\documents\visual studio 2017\Projects\killenter\killenter\obj\Release\killenter.csprojResolveAssemblyReference.cache

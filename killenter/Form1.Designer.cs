@@ -39,17 +39,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 23);
+            this.textBox1.Location = new System.Drawing.Point(32, 29);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(641, 164);
+            this.textBox1.Size = new System.Drawing.Size(853, 204);
             this.textBox1.TabIndex = 0;
             // 
             // convertButton
             // 
-            this.convertButton.Location = new System.Drawing.Point(138, 205);
+            this.convertButton.Location = new System.Drawing.Point(184, 256);
+            this.convertButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.convertButton.Name = "convertButton";
-            this.convertButton.Size = new System.Drawing.Size(75, 23);
+            this.convertButton.Size = new System.Drawing.Size(100, 29);
             this.convertButton.TabIndex = 1;
             this.convertButton.Text = "去换行符";
             this.convertButton.UseVisualStyleBackColor = true;
@@ -57,18 +59,22 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(24, 246);
+            this.textBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox2.Location = new System.Drawing.Point(32, 308);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(641, 205);
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox2.Size = new System.Drawing.Size(853, 255);
             this.textBox2.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(219, 205);
+            this.button1.Location = new System.Drawing.Point(292, 256);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 29);
             this.button1.TabIndex = 3;
             this.button1.Text = "快速去除";
             this.button1.UseVisualStyleBackColor = true;
@@ -76,9 +82,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(489, 205);
+            this.button2.Location = new System.Drawing.Point(652, 256);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 29);
             this.button2.TabIndex = 4;
             this.button2.Text = "快速翻译";
             this.button2.UseVisualStyleBackColor = true;
@@ -86,9 +93,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(408, 205);
+            this.button3.Location = new System.Drawing.Point(544, 256);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 29);
             this.button3.TabIndex = 5;
             this.button3.Text = "翻译";
             this.button3.UseVisualStyleBackColor = true;
@@ -97,17 +105,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(190, 461);
+            this.label1.Location = new System.Drawing.Point(253, 576);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 12);
+            this.label1.Size = new System.Drawing.Size(427, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "点击快速翻译，即可读取剪贴板的内容自动翻译并写回剪贴板！";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 484);
+            this.ClientSize = new System.Drawing.Size(925, 605);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -115,8 +124,9 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.convertButton);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
-            this.Text = "PDF翻译神器v0.2";
+            this.Text = "PDF翻译神器v0.4";
             this.ResumeLayout(false);
             this.PerformLayout();
 
